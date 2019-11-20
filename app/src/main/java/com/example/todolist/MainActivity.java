@@ -60,12 +60,15 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
     private TextView textView_Date;
+    private TextView textView_Date3;
     private DatePickerDialog.OnDateSetListener callbackMethod;
     private TimePickerDialog.OnTimeSetListener callbackMethod2;
 
     public void InitializeView()
     {
+
         textView_Date = (TextView)findViewById(R.id.textView_date);
+        textView_Date3 = (TextView)findViewById(R.id.textView_date3);
     }
 
     public void InitializeListener()
@@ -83,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onTimeSet(TimePicker view, int hourOfDay, int minute)
             {
-                textView_Date.setText(hourOfDay + "시" + minute + "분");
+                textView_Date3.setText(hourOfDay + "시" + minute + "분");
             }
         };
 
