@@ -10,28 +10,17 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <DatePicker
-            android:id="@+id/layout"
-            android:layout_width="368dp"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView_date" />
-
         <Button
             android:id="@+id/button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="196dp"
             android:onClick="OnClickHandler"
-            android:text="DatePickerDialog"
-            app:layout_constraintBottom_toTopOf="@+id/layout"
+            android:text="날짜 선택"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.89" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/textView_date"
