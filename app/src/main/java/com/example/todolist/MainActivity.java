@@ -1,12 +1,14 @@
 package com.example.todolist;
 
 import android.app.DatePickerDialog;
+import android.app.TimePickerDialog;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.DatePicker;
 import android.widget.TextView;
+import android.widget.TimePicker;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -59,6 +61,7 @@ public class MainActivity extends AppCompatActivity {
     }
     private TextView textView_Date;
     private DatePickerDialog.OnDateSetListener callbackMethod;
+    private TimePickerDialog.OnTimeSetListener callbackMethod2;
 
     public void InitializeView()
     {
@@ -75,6 +78,16 @@ public class MainActivity extends AppCompatActivity {
                 textView_Date.setText(year + "년" + (monthOfYear+1) + "월" + dayOfMonth + "일");
             }
         };
+        callbackMethod2 = new TimePickerDialog.OnTimeSetListener()
+        {
+            @Override
+            public void onTimeSet(TimePicker view, int hourOfDay, int minute)
+            {
+                textView_Date.setText(hourOfDay + "시" + minute + "분");
+            }
+        };
+
+
     }
 
     public void OnClickHandler(View view)
@@ -82,6 +95,14 @@ public class MainActivity extends AppCompatActivity {
         DatePickerDialog dialog = new DatePickerDialog(this, callbackMethod, 2019, 5, 24);
 
         dialog.show();
+
+    }
+    public void OnClickHandler2(View view)
+    {
+
+        TimePickerDialog dialog2 = new TimePickerDialog(this, callbackMethod2, 8, 10, true);
+
+        dialog2.show();
     }
 
 
